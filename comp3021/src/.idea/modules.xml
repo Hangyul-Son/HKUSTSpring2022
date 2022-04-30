@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignment1/Assignment1Skeleton 2/Assignment1Skeleton 2.iml" filepath="$PROJECT_DIR$/Assignment1/Assignment1Skeleton 2/Assignment1Skeleton 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment1/Efficiency_Improved_Assignement1 2/Efficiency_Improved_Assignement1 2.iml" filepath="$PROJECT_DIR$/Assignment1/Efficiency_Improved_Assignement1 2/Efficiency_Improved_Assignement1 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comp3021lab.iml" filepath="$PROJECT_DIR$/comp3021lab.iml" />
+    </modules>
+  </component>
+</project>

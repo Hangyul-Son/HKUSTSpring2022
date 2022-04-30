@@ -1,0 +1,16 @@
+IDCardNo        SymptomLevel        Status
+564332        Moderate        Confirmed
+564332        Moderate        Recovered
+564332        Critical        Confirmed
+564332        Critical        Recovered
+331433        Critical        Confirmed
+603300        Mild        Confirmed
+331433        Critical        Recovered
+384769        Moderate        Confirmed
+384769        Moderate        Recovered
+564332        Critical        Confirmed
+148206        Mild        Confirmed
+331433        Mild        Confirmed
+603300        Mild        Recovered
+603300        Critical        Confirmed
+384769        Mild        Confirmed

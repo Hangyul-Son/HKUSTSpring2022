@@ -1,0 +1,11 @@
+HospitalID        XLoc        YLoc        Critical        Moderate        Mild
+HOld1        100        210        4        18        23
+HOld2        583        695        1        0        19
+HOld3        131        692        6        1        32
+HOld4        652        95        8        19        29
+HOld5        118        5        2        18        24
+HOld6        862        99        1        4        14
+HOld7        880        725        4        18        31
+HOld8        596        844        6        5        35
+HOld9        97        656        9        18        17
+HOld10        925        265        7        11        21

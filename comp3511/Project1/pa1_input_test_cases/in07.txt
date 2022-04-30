@@ -1,0 +1,1 @@
+echo COMP3511 was bad | sed s/bad/good/g | sed s/was/is/g

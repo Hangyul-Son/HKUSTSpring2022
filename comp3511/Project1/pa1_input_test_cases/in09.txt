@@ -1,0 +1,1 @@
+ls / | head -3 | sort -r | tail -2 | sort

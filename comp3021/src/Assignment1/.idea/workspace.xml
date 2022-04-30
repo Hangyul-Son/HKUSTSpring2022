@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec680ae0-5069-4f4d-9adb-21f7db6f452f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/Assignment1Skeleton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/Assignment1Skeleton.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/data/Hospital.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/data/Hospital.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/data/Person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/data/Person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/data/Record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/data/Record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Capacity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Capacity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Capacity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Capacity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Hospital$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Hospital$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Hospital.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Hospital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/QuarantineSystem$DashBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/QuarantineSystem$DashBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/QuarantineSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/QuarantineSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Record$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Record$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Record.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/out/production/Assignment1Skeleton/SymptomLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/out/production/Assignment1Skeleton/SymptomLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample1/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample1/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample1/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample1/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample2/data/Hospital.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample2/data/Hospital.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample2/data/Person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample2/data/Person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample2/data/Record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample2/data/Record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample2/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample2/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample2/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample2/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample3/data/Hospital.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample3/data/Hospital.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample3/data/Person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample3/data/Person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample3/data/Record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample3/data/Record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample3/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample3/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/sampleData/sample3/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/sampleData/sample3/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Capacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Capacity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/QuarantineSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/QuarantineSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Assignment1Skeleton 2/src/main/java/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1Skeleton 2/src/main/java/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/Assignment1Skeleton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/Assignment1Skeleton.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/data/Hospital.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/data/Hospital.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/data/Person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/data/Person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/data/Record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/data/Record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Capacity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Capacity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Capacity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Capacity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Hospital$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Hospital$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Hospital.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Hospital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/QuarantineSystem$DashBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/QuarantineSystem$DashBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/QuarantineSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/QuarantineSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Record$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Record$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Record.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/SymptomLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/out/production/Assignment1Skeleton/SymptomLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample1/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample1/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample1/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample1/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Hospital.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Hospital.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample2/data/Record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample2/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample2/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample2/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample2/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample3/output/RecordTreatment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample3/output/RecordTreatment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/sampleData/sample3/output/Statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/sampleData/sample3/output/Statistics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Capacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Capacity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/QuarantineSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/QuarantineSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/Efficiency_Improved_Assignement1 2/src/main/java/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/SON_Hangyul Assignment1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/SON_Hangyul Assignment1.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment1/SON_Hangyul_Assignment1_Efficency_Improved.zip" beforeDir="false" afterPath="$PROJECT_DIR$/SON_Hangyul_Assignment1_Efficency_Improved.zip" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26Z0YXJDeer6i25Cyjqb3JWgUMu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <module name="Assignment1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Efficiency_Improved_Assignement1 2/src/main/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec680ae0-5069-4f4d-9adb-21f7db6f452f" name="Changes" comment="" />
+      <created>1647615848575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647615848575</updated>
+      <workItem from="1647615849615" duration="20000" />
+      <workItem from="1648281735842" duration="215000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+</project>

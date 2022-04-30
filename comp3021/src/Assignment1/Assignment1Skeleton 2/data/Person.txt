@@ -1,0 +1,6 @@
+IDCardNo        XLoc        YLoc        gender        age        isVac
+384769        916        865        Male        20        No
+564332        969        193        Female        28        No
+331433        536        108        Male        66        No
+148206        354        186        Female        37        Yes
+603300        591        120        Male        31        No

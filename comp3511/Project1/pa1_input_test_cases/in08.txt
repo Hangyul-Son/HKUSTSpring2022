@@ -1,0 +1,1 @@
+echo line | head -1 | tail -1 | wc -l

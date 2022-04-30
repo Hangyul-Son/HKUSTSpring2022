@@ -1,0 +1,20 @@
+./cfs < ./sample/in01.txt > output.txt
+diff -q ./sample/out01.txt output.txt > diff_result.txt
+./cfs < ./sample/in02.txt > output.txt
+diff -q ./sample/out02.txt output.txt > diff_result.txt
+./cfs < ./sample/in03.txt > output.txt
+diff -q ./sample/out03.txt output.txt > diff_result.txt
+./cfs < ./sample/in04.txt > output.txt
+diff -q ./sample/out04.txt output.txt > diff_result.txt
+./cfs < ./sample/in05.txt > output.txt
+diff -q ./sample/out05.txt output.txt > diff_result.txt
+./cfs < ./sample/in06.txt > output.txt
+diff -q ./sample/out06.txt output.txt > diff_result.txt
+./cfs < ./sample/in07.txt > output.txt
+diff -q ./sample/out07.txt output.txt > diff_result.txt
+./cfs < ./sample/in08.txt > output.txt
+diff -q ./sample/out08.txt output.txt > diff_result.txt
+./cfs < ./sample/in09.txt > output.txt
+diff -q ./sample/out09.txt output.txt > diff_result.txt
+./cfs < ./sample/in10.txt > output.txt
+diff -q ./sample/out10.txt output.txt > diff_result.txt
