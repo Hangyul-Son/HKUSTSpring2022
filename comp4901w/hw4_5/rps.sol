@@ -3,11 +3,17 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract rps {
 	address payable private Alice = payable(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
-	bytes32 private AliceChoice = "";
-	string public A_Choice = "";
 	address payable private Bob = payable(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db);
-	bytes32 private BobChoice = "";
-	string public B_Choice = "";
+	
+	bytes32 private aliceHashedChoice;
+	bytes32 private bobHashedChoice;
+	
+	bytes32 public aliceChoice;
+	bytes32 public bobChoice;
+
+	bytes32 public Rock = keccak256(abi.encodePacked("Rock"));
+	bytes32 public Paper = keccak256(abi.encodePacked("Paper"));
+	bytes32 public Scissors = keccak256(abi.encodePacked("Scissors"));
 
 	bool aliceChoiceDeclared;
 	bool bobChoiceDeclared;
@@ -15,77 +21,83 @@ contract rps {
 	bool bobSentChoice;
 	
 	uint256 blockDeadline;
+	uint256 sendChoiceDeadline;
 	bool gameOver;
 	
-	function sendChoice(bytes32 hashed_choice) public payable { //choice, choice and password concantenated and hashed
-		require((msg.sender == Alice && aliceSentChoice == false) || (msg.sender == Bob && bobSentChoice == false));
+	function sendChoice(bytes32 hashedChoice) public payable { //choice, choice and password concantenated and hashed
+		require((msg.sender == Alice && !aliceSentChoice) || (msg.sender == Bob && !bobSentChoice));
 		require(msg.value == 1 ether);
 		if (msg.sender == Alice) { 
-			AliceChoice = hashed_choice; 
+			aliceHashedChoice = hashedChoice; 
 			aliceSentChoice = true;
 		} else if (msg.sender == Bob) { 
-			BobChoice = hashed_choice; 
+			bobHashedChoice = hashedChoice; 
 			bobSentChoice = true;
 		}
+		//MODIFIED
+		sendChoiceDeadline = block.number + 100;
 	}
 
 	function reveal(string memory choice, string memory password) public {
 		require(aliceSentChoice && bobSentChoice);
 		require(msg.sender == Alice || msg.sender == Bob);
+		
 		if(msg.sender == Alice) {
-			require(keccak256(abi.encodePacked(choice, password)) == AliceChoice); 
 			require(!aliceChoiceDeclared);
-			A_Choice = choice;
+			require(keccak256(abi.encodePacked(choice, password)) == aliceHashedChoice); 
+			aliceChoice = keccak256(abi.encodePacked(choice));
 			aliceChoiceDeclared = true;
-		} else if (msg.sender == Bob) {
-			require(keccak256(abi.encodePacked(choice, password)) == BobChoice);
+		} 
+		else if (msg.sender == Bob) {
 			require(!bobChoiceDeclared);
-			B_Choice = choice; 
+			require(keccak256(abi.encodePacked(choice, password)) == bobHashedChoice);
+			bobChoice = keccak256(abi.encodePacked(choice));
 			bobChoiceDeclared = true;
 		}
+
 		blockDeadline = block.number + 100; //DEADLINE FOR REVEALING CHOICE
 	}
 
 	function compare() public { 
 		require(!gameOver);
 		require(block.number > blockDeadline || (aliceChoiceDeclared && bobChoiceDeclared));
-		if(!aliceChoiceDeclared && bobChoiceDeclared) {
-			Bob.transfer(2 ether);
-			gameOver = true;
-			return;
-		}
-		else if(aliceChoiceDeclared && !bobChoiceDeclared) {
-			Alice.transfer(2 ether);
-			gameOver = true;
-			return;
-		}
-		//Alice and Bob both have have made the choice
-		if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked(B_Choice))) {
-			Alice.transfer(1 ether);
-			Bob.transfer(1 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Rock")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Paper"))) {
-			Bob.transfer(2 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Rock")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Scissors"))) {
-			Alice.transfer(2 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Paper")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Rock"))) {
-			Alice.transfer(2 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Paper")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Scissors"))) {
-			Bob.transfer(2 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Scissors")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Rock"))) {
-			Bob.transfer(2 ether);
-		}
-		else if(keccak256(abi.encodePacked(A_Choice)) == keccak256(abi.encodePacked("Scissors")) && keccak256(abi.encodePacked(B_Choice)) == keccak256(abi.encodePacked("Paper"))) {
-			Alice.transfer(2 ether);
-		}
-		else { //When either the choice of Alice or Bob is invalid.
-			Alice.transfer(1 ether);
-			Bob.transfer(1 ether);
-		}
+
+		//Prevent Re-entrancy Attack
 		gameOver = true;
+		if(aliceChoiceDeclared && !bobChoiceDeclared) {
+			Alice.call{value: 2 ether, gas: 2300}("");
+			return;
+		}
+		else if(!aliceChoiceDeclared && bobChoiceDeclared) {
+			Bob.call{value: 2 ether, gas: 2300}("");
+			return;
+		}
+
+		if(aliceChoice == Rock && bobChoice == Scissors || aliceChoice == Paper && bobChoice == Rock || aliceChoice == Scissors && bobChoice == Paper) {
+			Alice.call{value: 2 ether, gas: 2300}("");
+		}
+		else if(aliceChoice == Rock && bobChoice == Paper || aliceChoice == Paper && bobChoice == Scissors || aliceChoice == Scissors && bobChoice == Rock) {
+			Bob.call{value: 2 ether, gas: 2300}("");
+		}
+		else {
+			Alice.call{value: 1 ether, gas: 2300}("");
+			Bob.call{value: 1 ether, gas: 2300}("");
+		}
+	}
+
+		//MODIFIED
+	function cancelGame() public {
+		require(gameOver != true);
+		require(msg.sender == Alice || msg.sender == Bob);
+		require(!bobSentChoice || !aliceSentChoice);
+		require(block.number > sendChoiceDeadline);
+
+		gameOver = true;
+		if(!bobSentChoice) {
+			Alice.call{value: 1 ether, gas: 2300}("");
+		}
+		else if(!aliceSentChoice) {
+			Bob.call{value: 1 ether, gas: 2300}("");
+		}
 	}
 }
