@@ -30,7 +30,7 @@ contract auction2 {
 		require(keccak256(abi.encodePacked(amount, password)) == bid_amount[msg.sender]);
 
 		//PREVENTS REENTRANCY ATTACK
-		require(paid[msg.sender] == false);
+		require(!paid[msg.sender]);
 		paid[msg.sender] = true; 
 		
 		//RETURN THE DEPOSIT AMOUNT
@@ -39,7 +39,7 @@ contract auction2 {
 		
 		if(amount > king_bid){ 
 			address payable previous_king = payable(king);
-			previous_king.transfer(king_bid);
+			previous_king.call{value:king_bid, gas: 2300}("");
 	
 			//UPLOAD NEW KING
 			king = msg.sender;
@@ -47,7 +47,7 @@ contract auction2 {
 		}
 		else {
 			address payable not_king = payable(msg.sender);
-			not_king.transfer(amount);
+			not_king.call{value:deposit, gas: 2300}("");
 		}
 	}
 
