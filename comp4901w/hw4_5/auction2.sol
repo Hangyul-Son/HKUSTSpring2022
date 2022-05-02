@@ -21,7 +21,7 @@ contract auction2 {
     hashedBidAmount[msg.sender] = bid;
   }
 
-	function checkBid(uint256 amount, string memory password) public payable { 
+	function checkBid(uint256 amount, uint256 password) public payable { 
 		require(block.number > makeBidDeadline); 
 		require(checkBidDeadline > block.number);
 		require(keccak256(abi.encodePacked(amount, password)) == hashedBidAmount[msg.sender]);
@@ -49,7 +49,7 @@ contract auction2 {
 		emit Winner(king, kingBid);
 	}
 
-	function returnBid(uint256 amount, string memory password) public pure returns (bytes32){
+	function returnBid(uint256 amount, uint256 password) public pure returns (bytes32){
 		return keccak256(abi.encodePacked(amount, password));
 	}
 }
