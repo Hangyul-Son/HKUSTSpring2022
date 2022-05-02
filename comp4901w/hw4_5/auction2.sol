@@ -2,53 +2,51 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract auction2 {
-	address public king;
-	uint256 public king_bid;
-	uint256 public deposit;
-	mapping(address=>bytes32) private bid_amount;
+	address payable public king;
+	uint256 public kingBid;
+	mapping(address=>uint256) private depositAmount;
+	mapping(address=>bytes32) private hashedBidAmount;
 	mapping(address=>bool) private paid;
 	uint256 makeBidDeadline;
 	uint256 checkBidDeadline;
 
-	constructor(uint256 amount) { 
-		king = msg.sender; 
-		deposit = amount;
-		makeBidDeadline = block.number + 6429; //6429 BLOCKS = 1 DAY
+	constructor() { 
+		makeBidDeadline = block.number + 6429;
 		checkBidDeadline = makeBidDeadline + 6429; 
 	}
 
 	function makeBid(bytes32 bid) public payable{ 
 		require(makeBidDeadline > block.number);
-		require(msg.value == deposit);
-    bid_amount[msg.sender] = bid;
+		depositAmount[msg.sender] = msg.value;
+    hashedBidAmount[msg.sender] = bid;
   }
 
 	function checkBid(uint256 amount, string memory password) public payable { 
-		require(msg.value == amount);
 		require(block.number > makeBidDeadline); 
 		require(checkBidDeadline > block.number);
-		require(keccak256(abi.encodePacked(amount, password)) == bid_amount[msg.sender]);
-
-		//PREVENTS REENTRANCY ATTACK
+		require(keccak256(abi.encodePacked(amount, password)) == hashedBidAmount[msg.sender]);
+		require(depositAmount[msg.sender] >= amount);
 		require(!paid[msg.sender]);
-		paid[msg.sender] = true; 
 		
-		//RETURN THE DEPOSIT AMOUNT
-		address payable reciever = payable(msg.sender);
-		reciever.transfer(deposit);
-		
-		if(amount > king_bid){ 
-			address payable previous_king = payable(king);
-			previous_king.call{value:king_bid, gas: 2300}("");
-	
-			//UPLOAD NEW KING
-			king = msg.sender;
-			king_bid = amount;	
+		paid[msg.sender] = true;
+		if(amount > kingBid){ 
+			address payable previousKing = king;
+			previousKing.call{value:kingBid, gas: 2300}("");
+
+			king = payable(msg.sender);
+			uint256 returnDeposit = depositAmount[msg.sender]-amount;
+			king.call{value:returnDeposit, gas: 2300}("");
+			kingBid = amount;	
 		}
 		else {
-			address payable not_king = payable(msg.sender);
-			not_king.call{value:deposit, gas: 2300}("");
+		 	payable(msg.sender).call{value:depositAmount[msg.sender], gas: 2300}("");
 		}
+	}
+
+	event Winner(address winner, uint256 amount);
+	function revealWinner() public returns (bytes32){
+		require(block.number > checkBidDeadline);
+		emit Winner(king, kingBid);
 	}
 
 	function returnBid(uint256 amount, string memory password) public pure returns (bytes32){
