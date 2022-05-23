@@ -39,7 +39,7 @@ public class TaskManagementSystem {
         Set<String> uniqueTags = new HashSet<>();
         for(Task task: tasks){
              for(String tag :task.getTags()){
-                 uniqueTags.add(tag.toLowerCase(Locale.ROOT));
+                 uniqueTags.add(tag);
              }
         }
         List<String> uniqueTagArray = new ArrayList<>(uniqueTags);
@@ -55,9 +55,7 @@ public class TaskManagementSystem {
      * @return the sorted list of the tasks. The sorting order is the ascending order of the ID.
      */
     public static List<Task> findTasks(Predicate<Task> p) {
-        return tasks.stream().filter(p).sorted(Comparator.comparing(Task::getId
-//                task->Integer.parseInt(task.getId().replace("ID",""))
-        )).collect(Collectors.toList());
+        return tasks.stream().filter(p).sorted(Comparator.comparing(Task::getId)).collect(Collectors.toList());
     }
 
     /**
@@ -80,9 +78,7 @@ public class TaskManagementSystem {
      * @return the sorted list of the tasks.
      */
     public static List<Task> getTopNTasks(Predicate<Task> p, int N) {
-        return tasks.stream().filter(p).sorted(Comparator.comparing(Task::getId
-//                task->Integer.parseInt(task.getId().replace("ID",""))
-        )).limit(N).collect(Collectors.toList());
+        return tasks.stream().filter(p).sorted(Comparator.comparing(Task::getId)).limit(N).collect(Collectors.toList());
     }
 
     /**
@@ -102,18 +98,13 @@ public class TaskManagementSystem {
         return task-> task.getType().equals(type);
     }
 
-    public static Predicate<Task> byTag(String tag) {
-        return task->task.getTags().contains(tag);
-
-    }
+    public static Predicate<Task> byTag(String tag) { return task->task.getTags().contains(tag); }
 
     public static Predicate<Task> byTitle(String keyword) {
         return task->task.getTitle().contains(keyword);
     }
 
-    public static Predicate<Task> byDescription(String keyword) {
-        return task->task.getDescription().contains(keyword);
-    }
+    public static Predicate<Task> byDescription(String keyword) { return task->task.getDescription().contains(keyword); }
 
     public static Predicate<Task> byCreationTime(LocalDate d) {
         return task->task.getCreatedOn().isBefore(d);
@@ -220,7 +211,7 @@ public class TaskManagementSystem {
 //        appendNewTask(task6);
 //        Assert.assertEquals(tasks.get(10).toString(), task6.toString());
 //
-//        List<Predicate<Task>> pls = genPredicates(TaskManagementSystem::byDescription, Arrays.asList("Write", "Java", "Streams"));
+            List<Predicate<Task>> pls = genPredicates(TaskManagementSystem::byDescription, Arrays.asList("Write", "Java", "Streams"));
 //        pls.addAll(genPredicates(TaskManagementSystem::byTag, Arrays.asList("blogging", "writing", "streaming")));
 //
 //        List<Task> taskList = findTasks(not(byTitle("Version")));
