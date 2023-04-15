@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Folder implements Comparable<Folder>, Serializable {
+
     ArrayList<Note> notes;
     String name;
 

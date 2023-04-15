@@ -20,8 +20,6 @@ contract CryptoDoggies
     event newDoggyEvent(uint16 doggy, address owner); //an event that shows a new doggy was created
     event transferDoggyEvent(uint16 doggy, address old_owner, address new_owner); //an event that is triggered when a doggy is transfered
 
-		//Problem 7 
-		uint256 developerBalance = 0 ether;
 
     constructor()
     {
@@ -32,8 +30,7 @@ contract CryptoDoggies
     //creates a random uint16 that can be used e.g. as the DNA of a doggy
     function random_uint16() private view returns (uint16)
     {
-				//Problem 2: Problem with Randomnes but change have not been made
-        uint random = uint(blockhash(block.number))^tx.gasprice; 
+        uint random = uint(blockhash(block.number))^tx.gasprice;
         uint16 ans = uint16(random % 2**16);
         return ans;
     }
@@ -43,14 +40,10 @@ contract CryptoDoggies
     {
         //make sure the fee that is paid for creating this doggy is enough
         require(msg.value > creationFee);
-
-				//Problem 4, Problem 3(Extra)
-        for(uint256 i=doggies.length-1; i>=0 && birthBlock[doggies[i]] >= block.number - 1000;i--)
+        for(uint i=0;i<doggies.length;++i)
         {
-						//Problem 3
-						require(msg.value * 100 > msg.value);
-						require(paidCreationFee[doggies[i]] * 101 > paidCreationFee[doggies[i]]);
-            require(paidCreationFee[doggies[i]] * 101 <= msg.value * 100);
+            if(birthBlock[doggies[i]] >= block.number - 1000)
+                require(paidCreationFee[doggies[i]] * 101 <= msg.value * 100);
         }
 
         //create a random doggy
@@ -58,13 +51,7 @@ contract CryptoDoggies
 
         //add it to the list of doggies and put it under the control of the caller of this function
         doggies.push(new_doggy);
-
-				//Problem 7
-				developerBalance += msg.value;
-
-				//Problem 1
-        owner[new_doggy] = msg.sender;
-
+        owner[new_doggy] = tx.origin;
         birthBlock[new_doggy] = block.number;
         paidCreationFee[new_doggy] = msg.value;
 
@@ -78,9 +65,6 @@ contract CryptoDoggies
         require(msg.value >= breedingFee);
         require(owner[my_doggy] == msg.sender);
         currentMate[my_doggy] = other_doggy; //this records that the breeding is approved by the current owner
-				
-				//Problem 7
-				developerBalance += msg.value;
         if(currentMate[other_doggy] == my_doggy) //checks if the other owner has already approved the breeding
         {
             //create two offspring puppies
@@ -93,10 +77,6 @@ contract CryptoDoggies
             birthBlock[puppy1] = birthBlock[puppy2] = block.number;
             emit newDoggyEvent(puppy1, owner[puppy1]);
             emit newDoggyEvent(puppy2, owner[puppy2]);
-
-						//Problem 5 
-						currentMate[other_doggy] = 0;
-						currentMate[my_doggy] = 0;
         }
     }
 
@@ -121,11 +101,7 @@ contract CryptoDoggies
     //puts up a doggy for sale
     function sellDoggy(uint16 my_doggy, uint asking_price) public
     {
-				//Problem 1
-        require(owner[my_doggy] == msg.sender);
-
-				//Problem 9
-				require(asking_price > sellingFee);
+        require(owner[my_doggy] == tx.origin);
         price[my_doggy] = asking_price;
     }
 
@@ -134,27 +110,14 @@ contract CryptoDoggies
     {
         require(msg.sender == previous_owner[my_former_doggy]);
         address payable recipient = payable(msg.sender);
-
-				//Problem 8 
- 				uint amount = price[my_former_doggy] - sellingFee;
-
-				//Problem 7
-				developerBalance += sellingFee;
-
-				//Problem 6
-				price[my_former_doggy] = 0;
-				recipient.transfer(amount);//pay the sale value to the previous owner
+        recipient.call{value: price[my_former_doggy]}(""); //pay the sale value to the previous owner
     }
 
     //buy a doggy that was previously put up for sale by its owner
-    function buyDoggy(uint16 doggy) public payable 
+    function buyDoggy(uint16 doggy) public payable
     {
         require(price[doggy] > 0); //check that the doggy is put up for sale by its owner
         require(msg.value == price[doggy] + buyingFee); //check that the right value is paid
-				
-				//Problem 7
-				developerBalance += buyingFee;
-
         previous_owner[doggy] = owner[doggy]; //remember the previous owner so that we pay them later
         owner[doggy] = msg.sender; //update the owner of the doggy
         emit transferDoggyEvent(doggy, previous_owner[doggy], owner[doggy]);
@@ -164,10 +127,7 @@ contract CryptoDoggies
     function reclaimFees() public
     {
         //we do not need access control since the fees will be paid to the developer anyway (no matter who calls this function)
-				//Problem 7
-				uint256 amount = developerBalance;
-				developerBalance = 0;
-        developer.transfer(amount);
+        developer.transfer(address(this).balance);
     }
 
 

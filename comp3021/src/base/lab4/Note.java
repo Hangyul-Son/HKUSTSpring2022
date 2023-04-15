@@ -17,7 +17,7 @@ public class Note implements Comparable<Note>, Serializable {
         if (this == o) return true;
         if (!(o instanceof Note)) return false;
         Note note = (Note) o;
-        return Objects.equals(this.title, note.title);
+        return this.title.equals(note.title);
     }
     public String getTitle() {
         return this.title;

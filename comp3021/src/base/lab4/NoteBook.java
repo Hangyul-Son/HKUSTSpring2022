@@ -45,6 +45,7 @@ public class NoteBook implements Serializable {
     }
 
     public boolean insertNote(String folderName, Note note){
+        //The fact that the folder has been made as an array is not clever.
         for(Folder folder: folders){
             if(folder.getName().equals(folderName)){
                 for(Note noteTemp: folder.notes) {
